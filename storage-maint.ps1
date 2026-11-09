@@ -1,6 +1,3 @@
-# Storage maintenance for this Windows machine.
-# Tracked in chezmoi (chedot). Notes: "PowerShell Things/Storage Maintenance".
-#
 # Usage: storage-maint [-Drive C] [-Optimize] [-ComponentCleanup] [-ResetBase] [-DiskCleanup]
 #   (no switches)      read-only: free space, drive type, Optimize-Volume -Analyze
 #   -Optimize          Optimize-Volume: TRIM on an SSD, defrag on a hard disk
@@ -24,7 +21,7 @@ param(
 )
 
 if ($Help) {
-  Get-Content $PSCommandPath | Select-Object -First 13 |
+  Get-Content $PSCommandPath | Select-Object -First 10 |
     ForEach-Object { $_ -replace '^# ?', '' }
   exit 0
 }
